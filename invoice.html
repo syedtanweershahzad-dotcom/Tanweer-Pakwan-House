@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View and print your catering order invoice from Tanweer Pakwan House.">
+    <title>Order Invoice | Tanweer Pakwan House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-category="invoice">
+    <script src="page-header.js"></script>
+    <div data-page-images hidden>
+        <img src="images/package-valima.webp" alt="A premium catering spread ready to be ordered"
+            data-caption="Your daawat, clearly itemised.">
+        <img src="images/package-valima.webp" alt="Premium order planning"
+            data-description="Review a complete catering spread before confirming your order."><img
+            src="/images/Main course selection.jpg" alt="Main course selection"
+            data-description="Choose a signature rice dish as the centrepiece of your menu."><img
+            src="/images/Dessert selection.jpg" alt="Dessert selection"
+            data-description="Add a cool, creamy finish for guests of every age.">
+    </div>
+
+    <main class="page-main page-width">
+        <div class="page-intro print-hide">
+            <div>
+                <p class="eyebrow">Your daawat, itemised</p>
+                <h1>Order <em>Invoice</em></h1>
+            </div>
+            <button class="button button-dark" onclick="window.print()">Print / Save PDF <span
+                    aria-hidden="true">↗</span></button>
+        </div>
+
+        <section class="invoice" id="printable-invoice">
+            <div class="invoice-head">
+                <div>
+                    <h2 class="invoice-title">TANWEER PAKWAN HOUSE</h2>
+                    <div class="invoice-meta">Main Commercial Area, Karachi<br>+92 300 1234567</div>
+                </div>
+                <div class="invoice-meta">INVOICE<br><span id="inv-date"></span><br>TPH-2026</div>
+            </div>
+
+            <div class="content-grid print-hide">
+                <div class="field">
+                    <label for="custName">Customer name</label>
+                    <input id="custName" type="text" placeholder="Your name">
+                </div>
+                <div class="field">
+                    <label for="custPhone">Phone number</label>
+                    <input id="custPhone" type="tel" placeholder="03xx-xxxxxxx">
+                </div>
+            </div>
+
+            <table class="invoice-table">
+                <thead>
+                    <tr>
+                        <th>Product / Item</th>
+                        <th>Qty</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                        <th class="print-hide">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="invoice-rows"></tbody>
+            </table>
+
+            <div class="invoice-total">
+                <div class="total-line"><span>Subtotal</span><span id="subtotal">Rs. 0</span></div>
+                <div class="total-line"><span>Delivery / service</span><span id="delivery">Rs. 0</span></div>
+                <div class="total-line total-grand"><span>Grand total</span><span id="grandtotal">Rs. 0</span></div>
+            </div>
+
+            <p class="invoice-meta invoice-notice">Order confirmation requires 50% advance. Thank you for choosing us.
+            </p>
+        </section>
+
+        <section class="newsletter-section">
+            <div class="newsletter-col">
+                <h2>Stay in touch</h2>
+                <p>Be the first to hear about new daawat deals, seasonal menus, and catering discounts from Tanweer
+                    Pakwan House.</p>
+                <form class="subscribe-form">
+                    <label for="newsletter-email" class="visually-hidden">Email address</label>
+                    <input id="newsletter-email" type="email" placeholder="name@email.com" required>
+                    <button type="submit" class="button button-gold">Subscribe</button>
+                </form>
+            </div>
+            <div class="newsletter-col">
+                <h2>Get catering updates & offers</h2>
+                <ul class="bullet-list">
+                    <li>✓ Special discounts on wedding & event packages</li>
+                    <li>✓ Seasonal menu updates and new deg recipes</li>
+                    <li>✓ Expert advice on event menu planning</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-width footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">TPH</span>
+                    <span>Tanweer <b>Pakwan House</b></span>
+                </a>
+                <p>© 2026 Tanweer Pakwan House - All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook">FB</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">IG</a>
+                    <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <b>Quick Links</b>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="calculator.html">Deg Calculator</a>
+            </div>
+            <div class="footer-links">
+                <b>Menu Pages</b>
+                <a href="biryani.html">Biryani & Pulao</a>
+                <a href="curry.html">Korma & Karahi</a>
+                <a href="bbq.html">BBQ Specials</a>
+                <a href="sweets.html">Sweets & Meetha</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

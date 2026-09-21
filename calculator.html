@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Calculate deg and catering quantities for biryani and pulao based on your guest count at Tanweer Pakwan House.">
+    <title>Deg Calculator | Tanweer Pakwan House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-category="calculator">
+    <script src="page-header.js"></script>
+    <div data-page-images hidden>
+        <img src="images/biryani-chicken.webp" alt="A full serving of chicken biryani for planning a family feast"
+            data-caption="Plan every deg with confidence.">
+        <img src="/images/Biryani portionsjpg.jpg" alt="Biryani portions"
+            data-description="A generous rice dish is the starting point for planning each deg."><img
+            src="/images/Pulao for special tables.jpg" alt="Pulao for special tables"
+            data-description="Rich pulao brings a royal touch to larger guest lists."><img src="/images/Bread planning.jpg"
+            alt="Bread planning" data-description="Fresh naan rounds out the meal alongside curry and rice.">
+    </div>
+
+    <main class="page-main page-width">
+        <div class="page-intro">
+            <div>
+                <p class="eyebrow">Plan with confidence</p>
+                <h1>Deg <em>Calculator</em></h1>
+            </div>
+            <p>Get a quick biryani or pulao estimate based on the number of guests you are serving.</p>
+        </div>
+
+        <div class="tool-panel">
+            <div class="field">
+                <label for="guestCount">Total number of guests</label>
+                <input id="guestCount" type="number" min="1" placeholder="e.g. 200">
+            </div>
+            <div id="calcResult" class="result">Enter your guest count to get an estimate.</div>
+        </div>
+
+        <section class="newsletter-section">
+            <div class="newsletter-col">
+                <h2>Stay in touch</h2>
+                <p>Be the first to hear about new daawat deals, seasonal menus, and catering discounts from Tanweer
+                    Pakwan House.</p>
+                <form class="subscribe-form">
+                    <label for="newsletter-email" class="visually-hidden">Email address</label>
+                    <input id="newsletter-email" type="email" placeholder="name@email.com" required>
+                    <button type="submit" class="button button-gold">Subscribe</button>
+                </form>
+            </div>
+            <div class="newsletter-col">
+                <h2>Get catering updates & offers</h2>
+                <ul class="bullet-list">
+                    <li>✓ Special discounts on wedding & event packages</li>
+                    <li>✓ Seasonal menu updates and new deg recipes</li>
+                    <li>✓ Expert advice on event menu planning</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="page-width footer-grid">
+            <div class="footer-brand">
+                <a class="brand" href="index.html">
+                    <span class="brand-mark">TPH</span>
+                    <span>Tanweer <b>Pakwan House</b></span>
+                </a>
+                <p>© 2026 Tanweer Pakwan House - All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Facebook">FB</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">IG</a>
+                    <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer"
+                        aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <b>Quick Links</b>
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="calculator.html">Deg Calculator</a>
+            </div>
+            <div class="footer-links">
+                <b>Menu Pages</b>
+                <a href="biryani.html">Biryani & Pulao</a>
+                <a href="curry.html">Korma & Karahi</a>
+                <a href="bbq.html">BBQ Specials</a>
+                <a href="sweets.html">Sweets & Meetha</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
